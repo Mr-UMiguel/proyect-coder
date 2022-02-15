@@ -1,0 +1,93 @@
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background-color: #E5E5E5;
+  font-family: "Roboto Slab";
+  font-size: 20px;
+  color: #333;
+  width: 100%;
+  height: 60rem; }
+
+h1 {
+  margin: 0 20px;
+  padding: 0;
+  font-weight: bold; }
+
+a {
+  text-decoration: none;
+  color: white; }
+
+header {
+  width: 100%;
+  height: 3rem;
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: #263F5B; }
+  header .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 992px;
+    height: 100%;
+    margin: 0 auto; }
+    header .navbar .nav-toggle {
+      color: white;
+      background: none;
+      border: none;
+      font-size: 30px;
+      padding: 0 20px;
+      display: none; }
+    header .navbar .navbar-ul {
+      display: flex;
+      list-style-type: none; }
+      header .navbar .navbar-ul .navbar-li {
+        display: flex;
+        align-items: center;
+        font-size: 18px;
+        padding: 0 10px;
+        color: white;
+        cursor: pointer;
+        width: max-content;
+        height: 3rem; }
+      header .navbar .navbar-ul #navbar-li-active {
+        background-color: #E5E5E5; }
+        header .navbar .navbar-ul #navbar-li-active a {
+          color: #333; }
+      header .navbar .navbar-ul .navbar-li:hover {
+        text-decoration: underline;
+        background-color: #E5E5E5;
+        color: #333; }
+        header .navbar .navbar-ul .navbar-li:hover a {
+          color: #333; }
+
+@media only screen and (max-width: 768px) {
+  body header {
+    height: 3rem; }
+    body header .navbar {
+      height: 100%; }
+      body header .navbar .navbar-ul {
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 0;
+        padding: 0;
+        position: fixed;
+        top: 3rem;
+        width: 100%;
+        height: 100%;
+        overflow-y: auto;
+        background-color: #333;
+        left: -100%;
+        transition: left 0.3s; }
+        body header .navbar .navbar-ul .navbar-li {
+          margin: 0;
+          padding: 0;
+          width: 100%;
+          padding: 0 20px;
+          font-size: 24px; }
+      body header .navbar .nav-toggle {
+        display: block;
+        cursor: pointer; }
+      body header .navbar .navbar-ul_visible {
+        left: 0; } }
