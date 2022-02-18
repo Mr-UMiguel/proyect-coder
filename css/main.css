@@ -1,4 +1,7 @@
 body {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr 1fr;
+  grid-template-rows: 1fr 3fr 3fr 1fr;
   margin: 0;
   padding: 0;
   border: 0;
@@ -6,8 +9,7 @@ body {
   font-family: "Roboto Slab";
   font-size: 20px;
   color: #333;
-  width: 100%;
-  height: 60rem; }
+  width: 100%; }
 
 h1 {
   margin: 0 20px;
@@ -15,12 +17,25 @@ h1 {
   font-weight: bold; }
 
 a {
-  text-decoration: none;
-  color: white; }
+  font-family: "Roboto Slab";
+  font-size: 20px;
+  font-weight: none;
+  color: white;
+  text-decoration: none; }
+
+p {
+  font-family: "Roboto Slab";
+  font-size: 20px;
+  font-weight: none;
+  color: white;
+  padding: 0;
+  margin: 0; }
 
 header {
+  grid-column: 1 / 5;
+  grid-row: 1 / 2;
   width: 100%;
-  height: 3rem;
+  height: 4rem;
   position: sticky;
   top: 0;
   left: 0;
@@ -50,7 +65,7 @@ header {
         color: white;
         cursor: pointer;
         width: max-content;
-        height: 3rem; }
+        height: 4rem; }
       header .navbar .navbar-ul #navbar-li-active {
         background-color: #E5E5E5; }
         header .navbar .navbar-ul #navbar-li-active a {
@@ -61,6 +76,32 @@ header {
         color: #333; }
         header .navbar .navbar-ul .navbar-li:hover a {
           color: #333; }
+
+main {
+  grid-row: 2 / 3; }
+
+.footer {
+  grid-column: 1 / 5;
+  grid-row: 3 / 4;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 5rem;
+  /* Height of the footer */
+  background: #263F5B; }
+  .footer .footer-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 100%; }
+    .footer .footer-container-links {
+      display: flex;
+      align-items: center; }
+      .footer .footer-container-links .fa-facebook-square, .footer .footer-container-links .fa-whatsapp-square, .footer .footer-container-links .fa-instagram {
+        background-color: transparent;
+        color: #e7eaeb;
+        margin: 0 20px; }
 
 @media only screen and (max-width: 768px) {
   body header {
@@ -91,3 +132,9 @@ header {
         cursor: pointer; }
       body header .navbar .navbar-ul_visible {
         left: 0; } }
+
+.main-index {
+  grid-column: 1 / 5;
+  grid-row: 2 / 4;
+  width: 100%;
+  height: 100%; }

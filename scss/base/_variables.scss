@@ -24,6 +24,16 @@ $fuentes: (
     font-color-secondary: white,
 );
 
+
+// MIXINS
+@mixin fontMain ($size,$bold,$color) {
+    font-family: map-get($fuentes , font-primary);
+    font-size: $size;
+    font-weight: $bold;
+    color: $color;
+}
+
+
 // ****************************************************
 //                    MEDIA QUERIES
 // ****************************************************

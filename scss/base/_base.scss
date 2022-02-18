@@ -1,4 +1,7 @@
 body {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 1fr;
+    grid-template-rows: 1fr 3fr 3fr 1fr;
     margin: 0;
     padding: 0;
     border: 0;
@@ -8,9 +11,9 @@ body {
     color: map-get($fuentes, font-color-primary);
 
     width: 100%;
-    height: 60rem;
 }
-
+// ********************************************************************
+// HEADER AND NAVIGATION BAR
 h1 {
     margin: 0 20px;
     padding: 0;
@@ -18,14 +21,20 @@ h1 {
 }
 
 a {
-    text-decoration: none;
-    color: white;
+  @include fontMain($size:20px,$bold:none,$color:white);
+  text-decoration: none;
 }
 
-
+p {
+  @include fontMain($size:20px,$bold:none,$color:white);
+  padding:0;
+  margin: 0;
+}
 header {
+  grid-column: 1 / 5;
+  grid-row: 1 / 2;
   width: 100%;
-  height: 3rem;
+  height: 4rem;
   position: sticky;
   top: 0;
   left: 0;
@@ -60,7 +69,7 @@ header {
         color: white;
         cursor: pointer;
         width: max-content;
-        height: 3rem;
+        height: 4rem;
       }
 
       #navbar-li-active {
@@ -85,8 +94,45 @@ header {
   }
 }
 
+main {
+  grid-row: 2 / 3;
+}
+
+// ***************************************************************
+// FOOTER
+
+.footer {
+  grid-column: 1 / 5;
+  grid-row: 3 / 4;
+  position: absolute;
+  bottom: 0;
+  width:100%;
+  height:5rem;   /* Height of the footer */
+  background: map-get($colores, blue-dark ) ;
+  .footer-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+    &-links {
+      display: flex;
+      align-items: center;
+
+      .fa-facebook-square, .fa-whatsapp-square, .fa-instagram {
+        background-color: transparent;
+        color: #e7eaeb;
+        margin: 0 20px;
+    }
+    }
+  }
+}
 
 
+
+// ***************************************************************
+// MEDIA QUERIES
 @include mediaQuery ($diseñoPantalla:mobile,$tamaño:768px) {
   body{  
     header {
