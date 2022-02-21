@@ -1,0 +1,103 @@
+.body-services {
+    grid-template-areas:
+    "hd   hd   hd   hd   hd   hd   hd   hd   hd   hd   hd   hd"
+    ".    main main main main main main main main main main    ."
+    ".    none none none none none none none none none none    ."
+    "ft   ft   ft   ft   ft   ft   ft   ft   ft   ft   ft   ft";
+    .main-services {
+        .dropdown-services-container{
+            button {
+                background-color: map-get($colores, grey-dark); /* Green */
+                border: none;
+                color: white ;
+                padding: 15px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 24px; 
+            }
+            margin: 50px 0;
+            .dropdown-financiamiento-content {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+                grid-template-areas: 
+                "img1 img2 img3"
+                "img1 table1 table1";
+                width: 100%;
+                height: 30rem;
+                background-color: map-get($colores, grey-dark);
+
+                .financiamiento-images1 {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    grid-area: img1;
+                    img {
+                        padding-right: 300px;
+                        width:100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+                .financiamiento-images2 {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    grid-area: img2;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+                .financiamiento-images3 {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    grid-area: img3;
+                    img {
+                        width:100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+                .financiamiento-images4 {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    grid-area: table1;
+                    img {
+                        width:100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+            .dropdown-financiamiento-content_visible{
+                display: none;
+            }
+
+            .dropdown-tiendas-content {
+                display: none;
+            }  
+            
+            .dropdown-tiendas-content_visible{
+                display: flex;
+                width: 100%;
+                height: 30rem;
+                background-color: map-get($colores, grey-dark);
+                p {
+                    color:white;
+                }
+            }
+        }
+    }
+
+    .relleno {
+        background-color: transparent;
+        grid-area: none;
+        height: 20rem;
+    }
+}
+
