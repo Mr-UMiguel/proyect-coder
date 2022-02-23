@@ -29,68 +29,70 @@
 </head>
 
 <body class="body-services">
+    <!-- ************************************************************** -->
+    <!-- ************************ HEADER ****************************** -->
     <header class="header">
         <nav class="navigationbar">
             <a class="navigationbar-h1" href="../index.html">
-                <h1>Emprendiendo</h1>
+                <h1 class="h1 p-0 m-0 lh-1">Emprendiendo</h1>
             </a>
             <button class="nav-toggle" aria-label="Abrir menú">
                 <i class="fa-solid fa-bars"></i>
             </button>
-            <ul class="navigationbar-ul">
-                <li class="navigationbar-li"><a href="../index.html" class="navigationbar-link">Inicio</a></li>
+            <ul class="navigationbar-ul m-0">
+                <li class="navigationbar-li" ><a href="../index.html"
+                        class="navigationbar-link">Inicio</a></li>
                 <li class="navigationbar-li" id="navigationbar-li-active"><a href="./services.html"
                         class="navigationbar-link">Servicios</a></li>
-                <li class="navigationbar-li"><a href="./aboutus.html" class="navigationbar-link">Sobre Nosotros</a></li>
-                <li class="navigationbar-li"><a href="./pricing.html" class="navigationbar-link">Precios</a></li>
-                <li class="navigationbar-li"><a href="./contactus.html" class="navigationbar-link">Contáctanos</a></li>
+                <li class="navigationbar-li"><a href="./aboutus.html" class="navigationbar-link">Sobre
+                        Nosotros</a></li>
+                <li class="navigationbar-li"><a href="./pricing.html" class="navigationbar-link">Precios</a>
+                </li>
+                <li class="navigationbar-li"><a href="./contactus.html"
+                        class="navigationbar-link">Contáctanos</a></li>
             </ul>
         </nav>
     </header>
+
+    <!-- SERVICES DEMOS -->
+
     <main class="main-services">
-        <div class="dropdown-services-container">
-            <button type="button" class="dropdown-toggle-financiamiento" aria-label="servicios:financiamiento">
-                <span>Financiamiento</span>
-                <span>
-                    <i class="fa-solid fa-caret-down"></i>
-                </span>
-            </button>
-            <button type="button" class="dropdown-toggle-tiendas" aria-label="servicios:financiamiento">
-                <span>Tiendas</span>
-                <span>
-                    <i class="fa-solid fa-caret-down"></i>
-                </span>
-            </button>
-            <div class="dropdown-financiamiento-content">
-                <div class="financiamiento-images1">
-                    <img src="../images/s1.svg" alt="demo financiamiento 1">
-                </div>
-                <div class="financiamiento-images2">
-                    <img src="#" alt="demo financiamiento 2">
-                </div>
-                <div class="financiamiento-images3">
-                    <img src="#" alt="demo financiamiento 3">
-                </div>
-                <div class="financiamiento-images4">
-                    <img src="#" alt="demo financiamiento 4">
-                </div>
-            </div>
-            <div class="dropdown-tiendas-content">
-                <p>Demo tiendas</p>
-            </div>
+        <div class="demo-financing">
+            <h2 class="h2-demo">Financiamiento</h2>
+            <p>Obtén financiamiento de bancos e inversores privados</p>
+            <img src="../images/Lightdashboard.svg" alt="dashboar demo image"> 
         </div>
     </main>
-    <div class="relleno">
-        <p>Nothing</p>
-    </div>
+    <section class="sec1">
+        <div class="demo-management">
+            <h2 class="h2-demo">Gestión, Contabilidad y Asesoría</h2>
+            <p>Tus estados financieros ¡son importantes! con ellos conocemos tu empresa, su estado, sus debilidades y
+                fortalezas. Con ellos podemos asesorarte, financiarte y muchas cosas más!</p>
+            <img src="../images/accounting.svg" alt="accounting demo image">
+        </div>
+    </section>
+    <section class="sec2">
+        <div class="demo-marketing">
+            <h2 class="h2-demo">Marketing</h2>
+            <p>Si estás en internet, estás en todo lado. Ten tu propia página web y te ayudamos a crear un diseño de producto para vender más</p>
+            <img src="../images/marketing.svg" alt="marketing demo image">
+        </div>
+    </section>
     <!-- ************************************************************** -->
     <!-- ************************ FOOTER ****************************** -->
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-container-links">
-                <i class="fa-brands fa-facebook-square fa-2x"></i>
-                <i class="fa-brands fa-instagram fa-2x"></i>
-                <i class="fa-brands fa-whatsapp-square fa-2x"></i>
+                <a href="http://facebook.com" target="_blank" rel="noopener">
+                    <i class="fa-brands fa-facebook-square fa-2x"></i>
+                </a>
+                <a href="http://instagram.com" target="_blank" rel="noopener">
+                    <i class="fa-brands fa-instagram fa-2x"></i>
+                </a>
+                <a href="./contactus.html" rel="noopener">
+                    <i class="fa-brands fa-whatsapp-square fa-2x"></i>
+                </a>
+                
             </div>
         </div>
     </footer>

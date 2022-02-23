@@ -1,103 +1,168 @@
 .body-services {
     grid-template-areas:
     "hd   hd   hd   hd   hd   hd   hd   hd   hd   hd   hd   hd"
-    ".    main main main main main main main main main main    ."
-    ".    none none none none none none none none none none    ."
+    ".    .    main main main main main main main main .    ."
+    ".    .    sec1 sec1 sec1 sec1 sec1 sec1 sec1 sec1 .    . "
+    ".    .    sec2 sec2 sec2 sec2 sec2 sec2 sec2 sec2 .    . "
+    ".    sec3 sec3 sec3 sec3 sec3 sec3 sec3 sec3 sec3 sec3 . "
     "ft   ft   ft   ft   ft   ft   ft   ft   ft   ft   ft   ft";
+
+    header {
+        height: 100px;        
+    }
     .main-services {
-        .dropdown-services-container{
-            button {
-                background-color: map-get($colores, grey-dark); /* Green */
-                border: none;
-                color: white ;
-                padding: 15px;
-                text-align: center;
-                text-decoration: none;
-                display: inline-block;
-                font-size: 24px; 
-            }
-            margin: 50px 0;
-            .dropdown-financiamiento-content {
-                display: grid;
-                grid-template-columns: 1fr 1fr 1fr;
-                grid-template-rows: 1fr 1fr;
-                grid-template-areas: 
-                "img1 img2 img3"
-                "img1 table1 table1";
+        grid-area: main;
+        margin: 20px;
+        .demo-financing {
+            width: 100%;
+            img {
+                margin: 30px;
                 width: 100%;
-                height: 30rem;
-                background-color: map-get($colores, grey-dark);
-
-                .financiamiento-images1 {
-                    display: flex;
-                    justify-content: flex-start;
-                    align-items: center;
-                    grid-area: img1;
-                    img {
-                        padding-right: 300px;
-                        width:100%;
-                        height: 100%;
-                        object-fit: cover;
-                    }
-                }
-                .financiamiento-images2 {
-                    display: flex;
-                    justify-content: flex-start;
-                    align-items: center;
-                    grid-area: img2;
-                    img {
-                        width: 100%;
-                        height: 100%;
-                        object-fit: cover;
-                    }
-                }
-                .financiamiento-images3 {
-                    display: flex;
-                    justify-content: flex-start;
-                    align-items: center;
-                    grid-area: img3;
-                    img {
-                        width:100%;
-                        height: 100%;
-                        object-fit: cover;
-                    }
-                }
-                .financiamiento-images4 {
-                    display: flex;
-                    justify-content: flex-start;
-                    align-items: center;
-                    grid-area: table1;
-                    img {
-                        width:100%;
-                        height: 100%;
-                        object-fit: cover;
-                    }
-                }
+                height: 100%;
             }
-            .dropdown-financiamiento-content_visible{
-                display: none;
+            .h2-demo {
+                margin: 15px;
+                font-size: 48px;
             }
-
-            .dropdown-tiendas-content {
-                display: none;
-            }  
-            
-            .dropdown-tiendas-content_visible{
-                display: flex;
-                width: 100%;
-                height: 30rem;
-                background-color: map-get($colores, grey-dark);
-                p {
-                    color:white;
-                }
+            p { 
+            margin: 10px;
+            font-size: 32px;
             }
         }
     }
 
-    .relleno {
-        background-color: transparent;
-        grid-area: none;
-        height: 20rem;
+    .sec1 {
+        grid-area: sec1;
+        margin: 20px;
+        .demo-management {
+            @include fontMain ($size:32px,$bold:none,$color:map-get($fuentes, font-color-primary));
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            img {
+                margin: 30px;
+                width: 100%;
+                height: 100%;
+                box-shadow: 0px 20px 15px #ccc;
+            }
+            .h2-demo {
+                margin: 15px;
+                font-size: 48px;
+            }
+            p {
+                margin: 10px;
+                padding: 5px 10px;
+                font-size: 32px;
+                text-align: justify;
+            }
+        }
+    }
+
+    .sec2 {
+        grid-area: sec2;
+        margin: 20px;
+        .demo-marketing {
+            @include fontMain ($size:32px,$bold:none,$color:map-get($fuentes, font-color-primary));
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            img {
+                margin: 30px;
+                width: 100%;
+                height: 100%;
+                box-shadow: 0px 20px 15px #ccc;
+            }
+            .h2-demo {
+                margin: 15px;
+                font-size: 48px;
+            }
+            p {
+                margin: 10px;
+                padding: 5px 10px;
+                font-size: 32px;
+                text-align: justify;
+            }
+        }
     }
 }
 
+
+@include mediaQuery ($diseñoPantalla:mobile,$tamaño:768px) {
+    .body-services {
+        .main-services {
+            grid-area: main;
+            margin: 15px;
+            .demo-financing {
+                width: 100%;
+                img {
+                    margin: 10px;
+                    width: 100%;
+                    height: 100%;
+                }
+                .h2-demo {
+                    margin: 5px;
+                    font-size: 24px;
+                }
+                p { 
+                margin: 10px;
+                font-size: 16px;
+                text-align: justify;
+                }
+            }
+        }
+
+        .sec1 {
+            grid-area: sec1;
+            margin: 15px;
+            .demo-management {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                width: 100%;
+                img {
+                    margin: 10px;
+                    width: 100%;
+                    height: 100%;
+                    box-shadow: 0px 20px 15px #ccc;
+                }
+                .h2-demo {
+                    margin: 5px;
+                    font-size: 24px;
+                }
+                p {
+                    margin: 5px;
+                    padding: 5px 5px;
+                    font-size: 16px;
+                    text-align: justify;
+                }
+            }
+        }
+
+        .sec2 {
+            grid-area: sec2;
+            margin: 15px;
+            .demo-marketing {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                width: 100%;
+                img {
+                    margin: 10px;
+                    width: 100%;
+                    height: 100%;
+                    box-shadow: 0px 20px 15px #ccc;
+                }
+                .h2-demo {
+                    margin: 5px;
+                    font-size: 24px;
+                }
+                p {
+                    margin: 5px;
+                    padding: 5px 5px;
+                    font-size: 16px;
+                    text-align: justify;
+                }
+            }
+        }
+    }
+}
