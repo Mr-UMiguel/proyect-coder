@@ -25,6 +25,11 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  color:white;
+  text-decoration:none;
+}
+
 p {
   @include fontMain($size:20px,$bold:none,$color:map-get($fuentes, font-color-primary));
   padding:0;

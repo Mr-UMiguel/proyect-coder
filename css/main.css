@@ -24,6 +24,10 @@ a {
   color: white;
   text-decoration: none; }
 
+a:hover {
+  color: white;
+  text-decoration: none; }
+
 p {
   font-family: "Roboto Slab";
   font-size: 20px;
@@ -132,6 +136,11 @@ main {
 
 .body-index {
   grid-template-areas: "hd   hd   hd   hd   hd   hd   hd   hd   hd   hd   hd   hd" "main main main main main main main main main main main main" ".    .    sec1 sec1 sec1 sec1 sec1 sec1 sec1 sec1 .    . " ".    .    sec2 sec2 sec2 sec2 sec2 sec2 sec2 sec2 .    . " "ft   ft   ft   ft   ft   ft   ft   ft   ft   ft   ft   ft"; }
+  .body-index h1 {
+    margin: 0 20px;
+    padding: 0;
+    font-weight: none;
+    font-size: 38px; }
   .body-index .sec1 {
     grid-area: sec1;
     margin: 40px 0;
@@ -201,6 +210,11 @@ main {
 
 .body-services {
   grid-template-areas: "hd   hd   hd   hd   hd   hd   hd   hd   hd   hd   hd   hd" ".    .    main main main main main main main main .    ." ".    .    sec1 sec1 sec1 sec1 sec1 sec1 sec1 sec1 .    . " ".    .    sec2 sec2 sec2 sec2 sec2 sec2 sec2 sec2 .    . " ".    sec3 sec3 sec3 sec3 sec3 sec3 sec3 sec3 sec3 sec3 . " "ft   ft   ft   ft   ft   ft   ft   ft   ft   ft   ft   ft"; }
+  .body-services h1 {
+    margin: 0 20px;
+    padding: 0;
+    font-weight: none;
+    font-size: 38px; }
   .body-services header {
     height: 100px; }
   .body-services .main-services {
@@ -329,6 +343,11 @@ main {
 
 .body-aboutus {
   grid-template-areas: "hd   hd   hd   hd   hd   hd   hd   hd   hd   hd   hd   hd" ".    .    main main main main main main main main .    ." "ft   ft   ft   ft   ft   ft   ft   ft   ft   ft   ft   ft"; }
+  .body-aboutus h1 {
+    margin: 0 20px;
+    padding: 0;
+    font-weight: none;
+    font-size: 38px; }
   .body-aboutus header {
     height: 100px; }
   .body-aboutus .main-aboutus {
@@ -369,6 +388,11 @@ main {
 
 .body-pricing {
   grid-template-areas: "hd   hd   hd   hd   hd   hd   hd   hd   hd   hd   hd   hd" ".    .    main main main main main main main main .    ." "ft   ft   ft   ft   ft   ft   ft   ft   ft   ft   ft   ft"; }
+  .body-pricing h1 {
+    margin: 0 20px;
+    padding: 0;
+    font-weight: none;
+    font-size: 38px; }
   .body-pricing header {
     height: 100px; }
   .body-pricing .main-pricing {
@@ -442,6 +466,11 @@ main {
 
 .body-contactus {
   grid-template-areas: "hd   hd   hd   hd   hd   hd   hd   hd   hd   hd   hd   hd" ".    .    main main main main map  map  map  map  map    ." "ft   ft   ft   ft   ft   ft   ft   ft   ft   ft   ft   ft"; }
+  .body-contactus h1 {
+    margin: 0 20px;
+    padding: 0;
+    font-weight: none;
+    font-size: 38px; }
   .body-contactus header {
     height: 100px; }
   .body-contactus .main-contactus {
